@@ -1,0 +1,26 @@
+<template>
+
+    <lightning-layout>
+        <lightning-layout-item padding="around-small">
+            <lightning-input label="OrderCode" name="ordercode"  type="search" variant="label-hidden" placeholder="Order Number" onchange={handleOrderCodeChange} ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+           <lightning-input label="Custom Name" name="suppliername" type="search" variant="label-hidden" onchange={handleSupplierNameChange} placeholder="Customer" value={Custom_Name}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <lightning-input label="Date" name="date"  type="date" variant="label-hidden" placeholder="Date" onchange={handleDateChange} value={date_Date}></lightning-input>
+        </lightning-layout-item>
+       
+       
+        <lightning-layout-item padding="around-small">
+            <lightning-button variant="search" label="search" title="Search"  onclick={handleClickSearch} class="slds-m-left_x-small"></lightning-button>
+        </lightning-layout-item>
+</lightning-layout>     
+
+    <template if:true={ordList}>
+        <!-- <lightning-datatable data={ordList} columns={columns} key-field="Id" max-row-selection = 1 selected-rows= {selectedRow} onrowselection={handleOnSelect}> -->
+            <lightning-datatable data={ordList} columns={columns} key-field="Id" max-row-selection = 1 onrowselection={handleOnSelect}>
+        </lightning-datatable>
+    </template>
+    
+</template>

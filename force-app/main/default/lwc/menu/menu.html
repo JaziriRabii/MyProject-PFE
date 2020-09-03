@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-m-vertical_medium">
+        <h1 class="slds-text-heading_small"></h1>
+        <p class="slds-text-body_regular"> </p>
+    </div>
+    
+    <div style="width: 320px;">
+        <lightning-vertical-navigation onselect={handleSelect} selected-item="receiving">
+            <lightning-vertical-navigation-section label="Menu">
+                <lightning-vertical-navigation-item-icon
+                    label="Receiving"
+                    name="receiving"
+                    icon-name="standard:timesheet_entry">
+                </lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon
+                    label="Shipping"
+                    name="shipping"
+                    icon-name="standard:shipment">
+                </lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon
+                    label="Reordering"
+                    name="reordering"
+                    icon-name="standard:return_order">
+                </lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon
+                    label="Inventory"
+                    name="inventory"
+                    icon-name="standard:note">
+                </lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon
+                    label="Settings"
+                    name="settings"
+                    icon-name="standard:settings">
+
+                </lightning-vertical-navigation-item-icon>
+            </lightning-vertical-navigation-section>
+            
+        </lightning-vertical-navigation>
+    </div>
+</template>

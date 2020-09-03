@@ -1,0 +1,27 @@
+<template>
+
+    <!-- <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="2" medium-device-size="3" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center"> {OrderNumber}</div>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" medium-device-size="3" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{OrderName}</div>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" medium-device-size="3" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{Supplier}</div>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" medium-device-size="3" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{Date}</div>
+            </lightning-layout-item>
+            
+        </lightning-layout>
+        </div> -->
+    
+    <template if:true= {OrderProducts}>
+            
+        <lightning-datatable data={OrderProducts} columns={columns} key-field="Id" draft-values= {draftValues} onsave={handleSaveDraftValues}>
+    </lightning-datatable>
+</template>
+    
+</template>

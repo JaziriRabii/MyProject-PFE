@@ -1,0 +1,23 @@
+<template>
+
+
+    <c-content-receiving ></c-content-receiving>
+
+
+
+    <c-content-shipping></c-content-shipping>
+   
+
+   <template if:true={isReordering}>
+    <c-content-reordering></c-content-reordering>
+   </template>
+
+   <template if:true={isInventory}>
+    <c-content-inventory></c-content-inventory>
+   </template>
+
+   <template if:true={isSettings}>
+    <c-content-settings></c-content-settings>
+   </template>
+    
+</template>
